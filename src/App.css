@@ -1,14 +1,16 @@
-html,body,#root,.App{
+html,body,#root,.App,.content {
   height: 100%;
   background-color: #17151a;
   font-family:'Circular', sans-serif;
+  color: white;
 }
 
-.App   {
+.App {
+  display: flex;
+  flex-direction:column;
+}
+
+.content {
   display: flex;
   flex-direction:row;
-}
-
-.side-bar{
-  width: 26%;
 }
