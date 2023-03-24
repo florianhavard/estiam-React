@@ -8,9 +8,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function Layout() {
     return (
         <Router>
-
             <div className='layout'>
-                <div className="content">
+                <div className="content" style={{ flexGrow: 1 }}>
                     <SideBar />
                     <Routes>
                         <Route exact path="/" element={<HomePage />} />

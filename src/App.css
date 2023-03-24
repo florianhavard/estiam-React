@@ -1,4 +1,4 @@
-html,body,#root,.App,.content {
+html,body,#root,.App,.layout{
   height: 100%;
   background-color: #17151a;
   font-family:'Circular', sans-serif;
@@ -8,6 +8,11 @@ html,body,#root,.App,.content {
 .App {
   display: flex;
   flex-direction:column;
+}
+
+.layout{
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
