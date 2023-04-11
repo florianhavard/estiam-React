@@ -2,12 +2,12 @@ import './App.css';
 import Layout from './Components/Laysout';
 
 function App() {
-  
-  
-//TODO
+
+
+  //TODO
   return (
     <div className="App">
-        <Layout />
+      <Layout />
     </div>
   );
 }

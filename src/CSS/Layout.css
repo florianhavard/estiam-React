@@ -1,12 +1,37 @@
+/* HEADER APP*/
+
+.header-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 5%;
+    align-items: center;
+}
+
+.header-app div svg {
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: transparent;
+    opacity: 50%;
+}
+
+.header-app div svg:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+
+
 /* SIDE BAR*/
 
 .side-bar {
-    max-width: 200px;
+    width: 250px;
     background-color: #000000;
     padding: 2%;
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 1%;
 }
 
 .side-bar .navLink {
@@ -21,7 +46,32 @@
     display: flex;
     flex-direction: column;
     color: white;
-    gap: 10px
+    gap: 10px;
+    overflow-y: auto;
+    height: max-content;
+}
+
+.side-bar-playlist a {
+    text-decoration: none;
+    color: white;
+}
+
+.side-bar-playlist::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 10px;
+}
+
+.side-bar-playlist::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.side-bar-playlist::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.side-bar-playlist::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .side-bar-title {
@@ -41,7 +91,7 @@
 .footer {
     display: flex;
     flex-direction: row;
-    height:fit-content;
+    height: fit-content;
     background-color: #181818;
     border-top: 1px solid #282828;
     align-items: center;
@@ -57,7 +107,8 @@
 
 }
 
-.musique-button, .recap-musique {
+.musique-button,
+.recap-musique {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,13 +151,96 @@
     position: fixed;
     top: 40%;
     right: 5%;
-    }
+}
 
-svg{
-        color: white;
-        filter: brightness(80%);
-    }
+svg,
+.navLink {
+    color: white;
+    filter: brightness(80%);
+}
 
-svg:hover{
-    filter: brightness(100%);
-    }
+svg:hover,
+.navLink:hover {
+    filter: brightness(200%);
+    cursor: pointer;
+}
+
+
+/* HOME PAGE */
+
+.home-page {
+    padding: 2%;
+}
+
+.list-playlists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-playlists a {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #2c2b2e;
+    height: fit-content;
+    width: 49%;
+    margin: 1% 0;
+
+}
+
+.playlist-home-page {
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+}
+
+.playlist-home-page img {
+    border-radius: 5px;
+}
+
+/* Playlist Page*/
+.playlist-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.content-playlist {
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    border: none;
+    border-collapse:collapse;
+}
+
+.content-playlist td,
+.content-playlist th {
+    text-align: left;
+    background-color: transparent;
+}
+
+.content-playlist tbody tr:hover {
+    background-color:#2a2a2a;
+}
+
+.header-playlist {
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    background: linear-gradient(to top, transparent, #3d3545);
+    padding: 2%;
+    padding-top: 10%;
+}
+
+.playlist-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    padding: 0 2%;
+}
