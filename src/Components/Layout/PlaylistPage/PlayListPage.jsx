@@ -2,28 +2,24 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PlayListContent from "./PlayListContent";
 import HeaderPlaylist from "./HeaderPlaylist";
-import axios from "axios";
+import APIPlaylist from "../../../Services/APIPlaylist";
 
 function PlayListPage() {
     const { idPlaylist } = useParams();
-
     const [data, setData] = useState();
-    const instanceAxios = axios.create({
-        baseURL: `http://localhost:3010/`,
-        headers: { "Access-Control-Allow-Origin": "*", },
-        responseType: "json",
-    });
+
+    async function handleChange() {
+        try{
+            setData(await APIPlaylist.findOne( idPlaylist )) 
+        }
+        catch (error){
+            console.error(error.response)
+        }
+    }
     useEffect(() => {
-        instanceAxios.get(`playlist/${idPlaylist}`, { params: { idPlaylist } })
-            .then(response => {
-                setData(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        handleChange()
     }, [idPlaylist]);
 
-    console.log(data)
     if (data) {
 
         return (

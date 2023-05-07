@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
 
-function NavLink({logo, text}){
-    return(
+function NavLink({ logo, text, link }) {
+    return (
         <div className="navLink">
-           <span>{logo} </span><span>{text}</span>
+            <Link to={link} >
+                <span>{logo} </span><span>{text}</span>
+            </Link>
         </div>
     )
 }

@@ -15,16 +15,16 @@ function SideBar() {
   return (
     <div className="side-bar">
       <div className="side-bar-title">
-        <NavLinkLocal logo={<BsSpotify />} text="Spotify" />
+        <NavLinkLocal logo={<BsSpotify />} text="Spotify" link="/"/>
       </div>
       <div className="side-bar-content">
-        <NavLinkLocal logo={<AiFillHome />} text="Accueil" />
-        <NavLinkLocal logo={<BsSearch />} text="Rechercher" />
-        <NavLinkLocal logo={<TfiBook />} text="Bibliothèque" />
+        <NavLinkLocal logo={<AiFillHome />} text="Accueil" link="/"/>
+        <NavLinkLocal logo={<BsSearch />} text="Rechercher" link="/"/>
+        <NavLinkLocal logo={<TfiBook />} text="Bibliothèque" link="/"/>
       </div>
       <div className="side-bar-shortcut">
-        <NavLinkLocal logo={<GoDiffAdded />} text="Créer une playlist" />
-        <NavLinkLocal logo={<AiFillHeart />} text="Titres likés" />
+        <NavLinkLocal logo={<GoDiffAdded />} text="Créer une playlist" link="/new_Playlist"/>
+        <NavLinkLocal logo={<AiFillHeart />} text="Titres likés" link="/"/>
         <hr />
       </div>
       <div className="side-bar-playlist">

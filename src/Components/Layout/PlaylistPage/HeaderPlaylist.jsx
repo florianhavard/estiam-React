@@ -4,7 +4,7 @@ function HeaderPlaylist(props) {
             <img src={props.data.img + "/200/200"} alt="image-playlist" />
             <div className="playlist-info">
                 <span>Playlist</span>
-                <span style={{ fontSize: 100 }}>{props.data.name}</span>
+                <span className="title-playlist">{props.data.name}</span>
                 <span>{props.data.musiques.length} titres</span>
             </div>
         </div>)

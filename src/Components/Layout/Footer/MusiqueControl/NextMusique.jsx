@@ -1,7 +1,11 @@
 import {BiSkipNext} from 'react-icons/bi'
+import {Attente} from "../../../../App";
+import { useContext } from 'react';
 
 function NextMusique(props){
-    const changeMusique =()=> {console.log("NEXT")}
+    const myList = useContext(Attente)
+
+    const changeMusique =()=> {myList.nextMusique()}
 
     return(
         <div className="next-musique" onClick={changeMusique}>
